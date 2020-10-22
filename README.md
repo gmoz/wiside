@@ -1,22 +1,47 @@
 # 專案說明
 
-本專案為台灣資料科學公司以WISIDE人流偵測模組為基礎，所開發之「無線訊號推估實際人流演算模型」開放原始碼
-目前階段版本進行到可以推估五個實際場域的人數。持續朝不特定場域，而是以「場域類型」的模型來前進。
-
-# 使用方式
-
-1. 在AI HUB 平台使用：
-https://aihub.org.tw/platform/algorithm/9b39ec8c-0e93-11eb-96bc-0242ac120002/description
-
-2. 或是您可以將專案放到自己的伺服器運行，自行修改程式碼。
-
-
-# 演算法使用說明
-
 ![台灣資料科學股份有限公司](https://i.imgur.com/hC4grlU.png)
 
 https://www.tdsc.com.tw/
 
+本專案為台灣資料科學公司以WISIDE人流偵測模組為基礎，所開發之「無線訊號推估實際人流演算模型」開放原始碼
+目前階段版本進行到可以推估五個實際場域的人數。持續朝不特定場域，而是以「場域類型」的模型來前進。
+
+## 訓練模型程式碼: 提供實證之所有場域線性模型完整訓練程式碼
+
+- `modeling.py`為線性模型完整訓練程式，執行後將自動跑完參數與訓練流程，最後傳出train和testing之實際入場人次MAE與MAE_ratio。
+
+> 請注意，訓練資料有提供我們蒐集到的訊號人數，但「場域實際入場人數」所有權屬於場域方，因保密協議無法提供，此類型資料請自行蒐集
+
+## 推論程式碼及其他相關程式: 提供模型所傳入參數之特徵工程計算程式碼、交叉驗證訓練模型之程式碼、誤差計算與圖表呈現之程式碼。
+
+- `inference.py`裡包含Polynomial多項式轉換、特徵數值縮放與K-fold Cross Validation之函數。`test_performance`詳述評判模型誤差公式MAE與MAE_ratio，並產生視覺化圖片。
+
+## 使用開放資料: 中央氣象局氣象站觀測資料—臺北測站之氣溫與降水量、各場域之社群粉絲團與官方網站公告活動消息
+
+- `opendata.py`: 整理中央氣象局氣象站觀測資料—臺北測站之氣溫與降水量之資料。
+
+- `.\opendata\場域官方社群活動資訊.txt`與[中央氣象局氣象站觀測資料—臺北測站之氣溫](https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp)
+
+## 環境與安裝套件
+
+- 程式: `python3.7`
+
+- 套件: `pip install -r requirement.txt`
+
+## 執行方式
+
+- `python modeling.py`
+
+
+
+
+# API使用說明
+
+## API使用方式
+
+1. 在AI HUB 平台使用：
+https://aihub.org.tw/platform/algorithm/9b39ec8c-0e93-11eb-96bc-0242ac120002/description
 
 
 ##使用說明

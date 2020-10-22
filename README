@@ -1,0 +1,23 @@
+## 訓練模型程式碼: 提供實證之所有場域線性模型完整訓練程式碼
+
+- `modeling.py`為線性模型完整訓練程式，執行後將自動跑完參數與訓練流程，最後傳出train和testing之實際入場人次MAE與MAE_ratio。
+
+## 推論程式碼及其他相關程式: 提供模型所傳入參數之特徵工程計算程式碼、交叉驗證訓練模型之程式碼、誤差計算與圖表呈現之程式碼。
+
+- `inference.py`裡包含Polynomial多項式轉換、特徵數值縮放與K-fold Cross Validation之函數。`test_performance`詳述評判模型誤差公式MAE與MAE_ratio，並產生視覺化圖片。
+
+## 使用開放資料: 中央氣象局氣象站觀測資料—臺北測站之氣溫與降水量、各場域之社群粉絲團與官方網站公告活動消息
+
+- `opendata.py`: 整理中央氣象局氣象站觀測資料—臺北測站之氣溫與降水量之資料。
+
+- `.\opendata\場域官方社群活動資訊.txt`與[中央氣象局氣象站觀測資料—臺北測站之氣溫](https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp)
+
+## 環境與安裝套件
+
+- 程式: `python3.7`
+
+- 套件: `pip install -r requirement.txt`
+
+## 執行方式
+
+- `python modeling.py`
