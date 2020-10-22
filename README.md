@@ -46,7 +46,7 @@ https://www.tdsc.com.tw/
 https://aihub.org.tw/platform/algorithm/9b39ec8c-0e93-11eb-96bc-0242ac120002/description
 
 
-##使用說明
+### 使用說明
 可以透過本演算模型，以無線訊號、環境參數等資料來推測出的現場實際人數，
 本演算法內部參數，會隨著本團隊的模型運作持續自我修正。
 
