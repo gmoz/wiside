@@ -4,6 +4,6 @@ matplotlib
 plotly
 category_encoders
 ###### Requirements with Version Specifiers ######`
-pandas >= 1.0.3
-sklearn >= 0.0
-numpy >= 1.18.2
+pandas>= 1.0.3
+sklearn>= 0.0
+numpy>= 1.18.2
